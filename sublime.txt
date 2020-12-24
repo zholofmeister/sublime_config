@@ -1,0 +1,25 @@
+C:\Users\zzy81\AppData\Roaming\Sublime Text 3\Packages\User
+
+c++14.sublime-build：
+{
+    "encoding": "utf-8",
+    "working_dir": "$file_path",
+    "shell_cmd": "g++ -Wall -std=c++14 -DLOCAL_DEFINE  \"$file\" -o \"$file_base_name\" && \"${file_path}/${file_base_name}\"",
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+    "selector": ["source.cpp"],
+
+    "variants": 
+    [
+        {   
+        "name": "Run",
+            "shell_cmd": "\"${file_path}/${file_base_name}\""
+        }
+    ]
+} 
+
+keybinding user:
+[
+	{ "keys": ["f9"], "command": "build" },
+	{ "keys": ["ctrl+f10"], "command": "build", "args": {"variant": "Run"} }
+]
+
